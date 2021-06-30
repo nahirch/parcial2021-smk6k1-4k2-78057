@@ -41,7 +41,8 @@ import { ProveedoresService } from './services/proveedores.service';
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
       { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
-      { path: 'articulos', component: ArticulosComponent }
+      { path: 'articulos', component: ArticulosComponent },
+      { path: 'proveedores', component: ProveedoresComponent }
     ])
   ],
   declarations: [
