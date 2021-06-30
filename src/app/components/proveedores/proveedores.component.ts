@@ -69,7 +69,7 @@ export class ProveedoresComponent implements OnInit {
 
   Agregar() {
     this.AccionABMC = 'A';
-    this.FormRegistro.reset({ Activo: true, IdArticulo: 0 });
+    this.FormRegistro.reset({ Activo: true, PoveedorId: 0 });
     this.submitted = false;
     this.FormRegistro.markAsUntouched();
   }
