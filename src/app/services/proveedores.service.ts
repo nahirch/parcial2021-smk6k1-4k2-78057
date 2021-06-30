@@ -14,20 +14,12 @@ import { Proveedor } from '../models/proveedor';
 export class ProveedoresService {
   resourceUrl: string;
   constructor(private httpClient: HttpClient) {
-    this.resourceUrl = '/';
+    this.resourceUrl = 'https://pymesbackend.azurewebsites.net/api/proveedores/';
     //this.resourceUrl = 'https://localhost:44349/api/articulos/';
   }
 
-  get(Nombre: string, Activo: boolean, Pagina: number) {
+  get() {
     let params = new HttpParams();
-    if (Nombre != null) {
-      params = params.append('Nombre', Nombre);
-    }
-    if (Activo != null) {
-      // para evitar error de null.ToString()
-      params = params.append('Activo', Activo.toString());
-    }
-    params = params.append('Pagina', Pagina.toString());
 
     return this.httpClient.get(this.resourceUrl, { params: params });
   }
