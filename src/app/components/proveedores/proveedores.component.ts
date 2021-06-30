@@ -62,6 +62,8 @@ export class ProveedoresComponent implements OnInit {
         ]
       ],
     });
+    this.Buscar();
+
 
   }
 
